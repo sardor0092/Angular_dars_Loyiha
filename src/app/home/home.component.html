@@ -1,1 +1,13 @@
-<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis quas corrupti adipisci dolores modi possimus facere explicabo placeat repellat nam! Expedita porro officia eos praesentium voluptatem aspernatur cum? Amet, accusantium!</p>
+<mat-grid-list cols="4" rowHeight="4:2" gutterSize="15px">
+    <mat-grid-tile *ngFor="let tile of tiles"
+    [colspan]="tile.cols"
+    [rowspan]="tile.rows"
+    [style.background]="tile.color">
+    {{tile.text}}
+
+
+    </mat-grid-tile>
+
+
+
+</mat-grid-list>
