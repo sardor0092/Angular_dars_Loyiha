@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DarsService } from './dars.service';
 import { HttpClientModule } from  '@angular/common/http';
 import { RouterModule } from '@angular/router';
@@ -13,6 +13,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './materil.module';
+import { Login1Component } from './login1/login1.component';
 
 
 
@@ -23,6 +24,7 @@ import { MaterialModule } from './materil.module';
     AboutComponent,
     DashboardComponent,
     PageNotFoundComponent,
+    Login1Component
 
    
   
@@ -35,7 +37,8 @@ import { MaterialModule } from './materil.module';
     HttpClientModule,
     RouterModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    ReactiveFormsModule
     
   ],
   providers: [DarsService],
