@@ -1,0 +1,78 @@
+
+
+
+<form class="container" [formGroup]="signUpForm" (ngSubmit)="onSubmit()">
+
+    <label for="first-name">Firs Name:</label>
+    <input class="form-control" type="text" id="first-name" formControlName="firstName">
+
+
+    <div *ngIf="signUpForm.controls.firstName.invalid &&(signUpForm.controls.firstName.dirty || signUpForm.controls.firstName.touched)">
+
+        <div class="alert alert-danger" *ngIf="signUpForm.controls.firstName.errors?.['required']">
+            Ism kiritish majburiy !
+        </div>
+
+
+        <div class="alert alert-danger" *ngIf="signUpForm.controls.firstName.errors?.['minlength']">
+            Ism kamida 5 ta kiritish majburiy !
+        </div>
+
+
+    </div>
+    <br><br>
+
+    <label for="last-name">Firs Name:</label>
+    <input class="form-control" type="text" id="last-name" formControlName="lastName">
+
+
+    <div *ngIf="signUpForm.controls.lastName.invalid &&(signUpForm.controls.lastName.dirty || signUpForm.controls.lastName.touched)">
+
+        <div class="alert alert-danger" *ngIf="signUpForm.controls.lastName.errors?.['required']">
+            familiya kiritish majburiy !
+        </div>
+
+
+        <div class="alert alert-danger" *ngIf="signUpForm.controls.lastName.errors?.['minlength']">
+            familiya kamida 5 ta kiritish majburiy !
+        </div>
+
+
+    </div>
+
+    <br><br>
+
+    <div formGroupName="adress">
+        <h1>Adress</h1>
+        <label for="street">Street</label>
+        <input class="form-control" type="text" id="street" formControlName="street"> <br>
+
+
+       <div *ngIf="signUpForm.controls.adress.controls.street.invalid && (signUpForm.controls.adress.controls.street.dirty || signUpForm.controls.adress.controls.street.touched)">
+    
+
+        <div class="alert alert-danger" *ngIf="signUpForm.controls.adress.controls.street.errors?.['required']">
+            ko'cha kiritish majburiy !
+        </div>
+
+
+        <div class="alert alert-danger" *ngIf="signUpForm.controls.adress.controls.street.errors?.['minlength']">
+            familiya kamida 5 ta kiritish majburiy !
+        </div>
+    
+    
+    
+    </div>
+
+
+    </div>
+
+
+    <button type="button" class="btn btn-danger"  [disabled]="!signUpForm.valid"> Yuborish </button>
+
+
+
+
+
+
+</form>

@@ -6,6 +6,7 @@ import { AboutComponent } from './about/about.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { Login1Component } from './login1/login1.component';
+import { ReactiveFormsComponent } from './reactive-forms/reactive-forms.component';
 
 const routes: Routes = [
   {path:'', redirectTo:'/home' ,pathMatch:'full'} ,
@@ -14,6 +15,7 @@ const routes: Routes = [
   {path:'about', component:AboutComponent},
   {path:'dashboard',component:DashboardComponent},
   {path:'login' , component:Login1Component} ,
+  {path:'form' , component:ReactiveFormsComponent} ,
   {path:"**" ,component:PageNotFoundComponent}
 
 

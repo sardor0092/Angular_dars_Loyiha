@@ -14,6 +14,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './materil.module';
 import { Login1Component } from './login1/login1.component';
+import { ReactiveFormsComponent } from './reactive-forms/reactive-forms.component';
 
 
 
@@ -24,8 +25,8 @@ import { Login1Component } from './login1/login1.component';
     AboutComponent,
     DashboardComponent,
     PageNotFoundComponent,
-    Login1Component
-
+    Login1Component,
+    ReactiveFormsComponent
    
   
   ],
