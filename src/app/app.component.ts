@@ -1,5 +1,6 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
-import { DarsService } from './dars.service';
+import { convertToParamMap } from '@angular/router';
+
 
 
 @Component({
@@ -9,14 +10,39 @@ import { DarsService } from './dars.service';
 })
 export class AppComponent  {
 
+
  
+
+  title:string = "Angular xatolik bilan ishlash!";
+
+
+  throwError1(){
+  
+    
+
  
+  }
 
-  
 
 
-  
+  throwError2(){
+   try {
 
+    console.log("Xatolik");
+    
+   }
+
+
+   catch(error){
+
+     // xatolik bo'lgan hodisa
+     console.log("Xatolik");
+     
+
+
+   }
+   
+  }
 
 
 

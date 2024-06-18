@@ -1,10 +1,10 @@
-import { NgModule } from '@angular/core';
+import { ErrorHandler, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { DarsService } from './dars.service';
+
 import { HttpClientModule } from  '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
@@ -15,6 +15,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './materil.module';
 import { Login1Component } from './login1/login1.component';
 import { ReactiveFormsComponent } from './reactive-forms/reactive-forms.component';
+import { DarsService } from './service/dars.service';
+import { GlobalErrorhandle } from './service/global.error';
 
 
 
@@ -42,7 +44,12 @@ import { ReactiveFormsComponent } from './reactive-forms/reactive-forms.componen
     ReactiveFormsModule
     
   ],
-  providers: [DarsService],
+  providers: [
+
+    {provide:ErrorHandler ,useClass:GlobalErrorhandle}
+
+
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

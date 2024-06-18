@@ -1,1 +1,12 @@
-<p>about works!</p>
+<div *ngIf="weatherData">
+
+    <h1>{{weatherData.name}} Weather</h1>
+
+    <p>Tempratura: {{weatherData.main.temp}}</p>
+    <p>Humi: {{weatherData.main.humidity}}</p>
+    <p>Weather: {{weatherData.weather[0].description}}</p>
+    <p>Wind: {{weatherData.wind.speed}} </p>
+
+
+
+</div>
